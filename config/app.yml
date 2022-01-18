@@ -1,14 +1,14 @@
 ---
 app:
-  name: OpenDAX
-  domain: app.local
+  name: HighDax
+  domain: highdax.net
   subdomain: www
   show_landing: true
 render_protect: false
 csrfEnabled: false
 ssl:
   enabled: false
-  email: support@example.com
+  email: support@highdax.com
 updateVersions: false
 images:
   peatio: quay.io/openware/peatio:2.6.48
@@ -23,12 +23,12 @@ finex:
 vendor:
   frontend: git@github.com:openware/baseapp.git
 kyc:
-  provider: local
-  authorization_token: changeme
+  provider: kycaid
+  authorization_token: 7520ada40fb9914fb71af3673fc21c288cda
   sandbox_mode: true
   api_endpoint: https://api.kycaid.com/
 vault:
-  root_token: changeme
+  root_token: s.aMdl4TJpAjEiUfwee3suFZiP
   peatio_rails_token: changeme
   peatio_crypto_token: changeme
   peatio_upstream_token: changeme
@@ -36,34 +36,35 @@ vault:
   barong_token: changeme
   finex_engine_token: changeme
 database:
-  host: db
+  host: prod-db.cyd32x31jc4u.ap-northeast-2.rds.amazonaws.com
   adapter: mysql
   port: 3306
   user: root
-  password: changeme
+  password: T#H!IsexChangeNev%erD!E
 storage:
-  provider: Google
-  bucketName: opendax-barong-docs-bucket
-  region: fra1
-  endpoint: https://fra1.digitaloceanspaces.com
-  accessKey: changeme
-  secretKey: changeme
+  provider: AWS
+  bucketName: docs-kyc-bitpnl
+  region: ap-northeast-2
+  endpoint: https://s3.ap-northeast-2.amazonaws.com
+  accessKey: AKIA4W6ZWZQWCKTDDGYO
+  secretKey: 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
   signatureVersion: '2'
 twilio:
   enabled: false
-  phone_number: "+15005550000"
-  account_sid: changeme
-  auth_token: changeme
+  phone_number: "+19378843145"
+  account_sid: "AC88005b8af6c98a5856bc67268135e069"
+  auth_token: "d03455bc7892ec06f93a66c349c30bfc"
+  content_template: "Your confirmation code for bitpnl is: {{code}}"
 gaTrackerKey: ''
 captcha:
-  type: none
-  siteKey: changeme
-  secretKey: changeme
+  type: v2
+  siteKey: 6LfX3fQbAAAAANLvUYW6ofqAmJcw37a0xrdUNHkh
+  secretKey: 6LfX3fQbAAAAAEpTkl94F75W3oqdzJmBTE8gDHvO
 smtp:
   host: smtp.sendgrid.net
   port: 2525
   user: apikey
-  password: changeme
+  password: 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
   sender_email: noreply@barong.io
   sender_name: Postmaster
   sender_logo: https://storage.googleapis.com/public_peatio/logo.png

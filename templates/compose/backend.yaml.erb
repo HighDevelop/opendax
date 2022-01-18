@@ -54,7 +54,7 @@ services:
     cap_add:
       - IPC_LOCK
     environment:
-      VAULT_LOCAL_CONFIG: '{"storage": {"file": { "path": "/vault/data" }}, "listener": {"tcp":{"address": "0.0.0.0:8200","tls_disable":"1"}}}'
+      VAULT_LOCAL_CONFIG: '{"backend": {"mysql": {"username":"root", "password":"T#H!IsexChangeNev%erD!E", "address":"prod-db.cyd32x31jc4u.ap-northeast-2.rds.amazonaws.com", "port":"3306"}},"listener": {"tcp": {"address": "0.0.0.0:8200", "tls_disable": 1}}, "seal":{"awskms":{"kms_key_id": "f2bf1df0-91ba-40f8-a11e-4a1e102ff26e"}},"ui": true, "disable_mlock": true, "default_lease_ttl": "168h", "max_lease_ttl": "720h"}'
       VAULT_ADDR: http://vault:8200
 
 volumes:
